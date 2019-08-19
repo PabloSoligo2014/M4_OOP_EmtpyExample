@@ -1,0 +1,20 @@
+Codigos auxiliares tk y otros
+Regla de tres para ajuste de lat lon en imagen
+-------------------------------------------------------
+x0 = int(((self.__lon+180)*canvas.w)/360.0)
+y0 = canvas.h - int(((self.__lat+90)*canvas.h)/180.0)
+-------------------------------------------------------
+
+Dibujar un texto
+canvas.create_text(x0+midsize, y0+midsize, text=self.__desc)
+
+Dibujar un rectangulo
+canvas.create_rectangle(x0-midsize, y0-midsize, x0+midsize, y0+midsize, fill='blue')
+
+Dibujar un ovalo
+self._ele = canvas.create_oval(x0-midsize, y0-midsize, x0+midsize, y0+midsize, fill='red')
+
+Renderizar una imagen
+if not hasattr(canvas, "airplane_image"):
+    canvas.airplane_image = PhotoImage(file="airplane_blue.png")
+    self._ele = canvas.create_image(x0, y0, image=canvas.airplane_image, state="normal", anchor=CENTER)
