@@ -11,7 +11,6 @@ from random import randrange
 from _datetime import datetime
 from tkinter.constants import ANCHOR
 
-
 class Application(Frame):
     __canvas = None
     def __init__(self, master=None, elements=None):
