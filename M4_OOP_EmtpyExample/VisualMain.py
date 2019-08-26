@@ -36,14 +36,11 @@ class Application(Frame):
         self.onUpdate()
         
     def onUpdate(self):
-        # update displayed time
-        #self.now.set(str(datetime.utcnow()))
+       
         self.root.title(str(datetime.utcnow()))
+        
         for ele in self._elements:
             ele.render(self.__canvas)
-        # schedule timer to call myself after 1 second
-        #car_image = PhotoImage(file="car.png")
-        #self.__canvas.create_image(60, 60, image=car_image)
         
         self.after(1000, self.onUpdate)
 

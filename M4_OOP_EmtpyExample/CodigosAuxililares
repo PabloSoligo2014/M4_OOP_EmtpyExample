@@ -22,14 +22,14 @@ if not hasattr(canvas, "airplane_image"):
     
  
 #Distancia entre dos puntos 
-from math import sin, cos, sqrt, atan2
+from math import sin, cos, sqrt, atan2, radians
 
 R = 6373.0
 
-lat1 = 52.2296756
-lon1 = 21.0122287
-lat2 = 52.406374
-lon2 = 16.9251681
+lat1 = radians( 52.2296756 )
+lon1 = radians( 21.0122287 )
+lat2 = radians( 52.406374 )
+lon2 = radians( 16.9251681 )
 
 dlon = lon2 - lon1
 dlat = lat2 - lat1
