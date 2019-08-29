@@ -4,6 +4,7 @@ Created on 22 ago. 2019
 @author: pabli
 '''
 from math import sin, cos, sqrt, atan2, radians
+
 class Geoposicion(object):
     #public #protected #private
     def __init__(self, lat=0.0, lon=0.0):
@@ -64,8 +65,12 @@ class Geoposicion(object):
         x0 = int(((self.__lon+180)*canvas.w)/360.0)
         y0 = canvas.h - int(((self.__lat+90)*canvas.h)/180.0)
         midsize = 5
-        self._ele = canvas.create_oval(x0-midsize, y0-midsize, x0+midsize, y0+midsize, fill='red')
-        return self._ele
+        self._ele = canvas.create_oval(x0-midsize, 
+                                       y0-midsize, 
+                                       x0+midsize, 
+                                       y0+midsize, 
+                                       fill='red')
+        return x0,y0
         
     
     

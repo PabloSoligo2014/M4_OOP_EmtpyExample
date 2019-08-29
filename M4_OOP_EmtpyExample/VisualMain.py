@@ -10,6 +10,8 @@ from tkinter import Tk, Canvas, Label, PhotoImage, Frame, NW, CENTER
 from random import randrange
 from _datetime import datetime
 from tkinter.constants import ANCHOR
+from Geoposition import Geoposicion
+from Place import Place
 
 class Application(Frame):
     __canvas = None
@@ -46,7 +48,10 @@ class Application(Frame):
 
 
 if __name__ == '__main__':
-    elements = []
+    elements = [Geoposicion(-34.612076, -58.442932),
+                Geoposicion(-12.065010, -37.932022),
+                Place(0.0,0.0, "Centro del mundo")]
+    
     root = Tk()
     app = Application(master=root, elements=elements)
     root.mainloop()

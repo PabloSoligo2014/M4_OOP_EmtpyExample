@@ -5,16 +5,16 @@ Created on 16 ago. 2019
 @author: pabli
 '''
 
-from Geoposition import Geoposicion
+from Place import Place
 
 if __name__ == '__main__':
     
     
-    g1 = Geoposicion(-34.615889, -58.369423)
-    g2 = Geoposicion(-34.671141, -58.564216)
+    p1 = Place(-34.615889, -58.369423, "BsAs")
+    p2 = Place(0.0, 0.0, "Centro del mundo")
     
     
-    print(g1-g2)
+    print(p1-p2)
     
     
     

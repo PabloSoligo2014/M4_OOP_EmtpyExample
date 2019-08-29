@@ -7,6 +7,7 @@ y0 = canvas.h - int(((self.__lat+90)*canvas.h)/180.0)
 
 Dibujar un texto
 canvas.create_text(x0+midsize, y0+midsize, text=self.__desc)
+canvas.create_rectangle(x0-midsize, y0-midsize, x0+midsize, y0+midsize, fill='blue')
 
 Dibujar un rectangulo
 canvas.create_rectangle(x0-midsize, y0-midsize, x0+midsize, y0+midsize, fill='blue')
